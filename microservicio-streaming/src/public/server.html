@@ -21,14 +21,9 @@
             var video = d.querySelector('#video');
             var canvas = d.querySelector('#canvas');
             var context = canvas.getContext('2d');
-            n.streaming= (
-                n.getUserMedia || 
-                n.webetUserMedia ||
-                n.mozGetUserMedia ||
-                n.msGetUserMedia
-            )
+            
 
-          n.streaming({
+          n.getUserMedia({
               video : true,
               audio : false
           },function (stream) {
